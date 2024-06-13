@@ -1,0 +1,195 @@
+/*
+header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+header li {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 15px;
+}
+
+header li.contact {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+}
+*/
+
+/*
+header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(27, 24, 199);
+  position: relative;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+header li {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 15px;
+}
+
+header li.contact {
+  margin-left: auto;
+  margin: 0 15px;
+}
+
+header #menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  header nav ul.show {
+    display: block;
+  }
+
+  header #menu-button {
+    display: block;
+  }
+}
+*/
+/* Estilos para el botón de hamburguesa */
+#menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-button:focus {
+  outline: none; /* Elimina el borde al enfocar el botón */
+}
+
+#menu-icon {
+  width: 40px; /* Ancho del icono */
+  height: 30px; /* Altura del icono */
+  position: relative;
+}
+
+#menu-icon span {
+  display: block;
+  position: absolute;
+  height: 5px; /* Grosor de las líneas */
+  width: 100%;
+  background: white; /* Color de las líneas */
+  border-radius: 3px; /* Bordes redondeados */
+  transition: transform 0.3s ease; /* Animación de las líneas */
+}
+
+#menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+#menu-icon span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#menu-icon span:nth-child(3) {
+  bottom: 0;
+}
+
+/* Cambia la apariencia del botón al estar activo */
+#menu-button.active #menu-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#menu-button.active #menu-icon span:nth-child(2) {
+  opacity: 0; /* Oculta la línea del medio */
+}
+
+#menu-button.active #menu-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(27, 24, 199);
+  position: fixed;
+  top: 0; /* Fija el header en la parte superior */
+  width: 100%; /* Asegura que el header ocupe todo el ancho */
+  z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+}
+
+/* Asegura que el contenido no se solape con el header */
+body {
+  padding-top: 120px;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+header li {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 15px;
+}
+
+header li.contact {
+  margin-left: auto;
+  margin: 0 15px;
+}
+
+header #menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 124px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  header nav ul.show {
+    display: block;
+  }
+
+  header #menu-button {
+    display: block;
+  }
+
+  /* Asegura que el contenido no se solape con el header en dispositivos móviles */
+  body {
+    padding-top: 120px;
+  }
+}
